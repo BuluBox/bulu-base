@@ -1,9 +1,8 @@
 ![Bulu Logo](assets/img/logo.png)
 
-# Bulu Django Base
+# Bulu Base
 
-Base project for a Django project at Bulu.
-
+Base Django project for Bulu Inc.
 
 ## Getting Started
 
