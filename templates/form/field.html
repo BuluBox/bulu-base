@@ -1,0 +1,3 @@
+{% if field.errors %}{% for error in field.errors %}
+<p class="error">{{ error }}</p>{% endfor %}{% endif %}
+<input type="{{ type }}" name="{{ field.name }}" {% if field.value %}value="{% if 'date' in field.name %}{{ field.value.month }}/{{ field.value.day }}/{{ field.value.year }}{% else %}{{ field.value }}{% endif %}"{% endif %} placeholder="{{ field.label }}" class="form-control" id="id_{{ field.name }}"/>
