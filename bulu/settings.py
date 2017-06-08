@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+INTERNAL_IPS = ['127.0.0.1']
 
 # Application definition
 
@@ -76,6 +77,41 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'bulu.wsgi.application'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    "formatters": {
+        "full": {
+            "format": "[%(asctime)s] [%(name)s] %(levelname)s: %(message)s",
+        },
+    },
+    'handlers': {
+        'debug': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'full',
+            'filename': os.path.join(BASE_DIR, '.logs/debug.log'),
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['debug'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['debug'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'bulu': {
+            'handlers': ['debug'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 
 # Database
