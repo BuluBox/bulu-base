@@ -1,9 +1,8 @@
 ![Bulu Logo](assets/img/logo.png)
 
-# Bulu Django Base
+# Bulu Base
 
-Base project for a Django project at Bulu.
-
+Base Django project for Bulu Inc. This project includes everything needed to get started, including bootstrap, libasass, a base template, login/logout/password reset functionality, and debugging tools.
 
 ## Getting Started
 
