@@ -10,10 +10,19 @@ $text-color: #3d3f41;
 
 
 // Typography
-$font-family-sans-serif:"Product Sans", sans-serif;
+$font-family-sans-serif: "Product Sans", sans-serif;
 
 
 // Navbar
 $navbar-height: 60px;
 
 $border-radius-base: 1px;
+
+
+$link: $brand-primary;
+$link_hover: darken($brand-primary, 10%);
+$button_color: $brand-primary;
+$copy_color: #505050;
+
+// Import our components
+@import 'components/admin.scss';

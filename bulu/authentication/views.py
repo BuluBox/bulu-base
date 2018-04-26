@@ -18,6 +18,12 @@ from django.views.generic import TemplateView, View
 class LoginView(AuthLoginView):
     template_name = 'authentication/login.html'
 
+    def form_valid(self, *args, **kwargs):
+        result = super(LoginView, self).form_valid(*args, **kwargs)
+        self.request.user.last_login = timezone.now()
+        self.request.user.save()
+        return result
+
     def get_success_url(self):
         next_url = self.request.GET.get('next', None)
         return next_url or reverse('index')

@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+Bulu Admin
+{% endblock %}
+
+{% block branding %}
+{% load staticfiles %}
+<h1 id="site-name"><img src="{% static "img/logo.png" %}" style="height:40px;"/></h1>
+{% endblock %}
+
+{% block extrastyle %}
+{% load compress i18n staticfiles %}
+{% compress css %}
+<link rel="stylesheet" type="text/x-scss" href="{% static 'css/admin.scss' %}" />
+{% endcompress %}
+{% endblock %}

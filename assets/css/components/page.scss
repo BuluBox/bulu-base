@@ -4,6 +4,7 @@ html, body {
 }
 .page {
   min-height: 100%;
+  background-color: #efefef;
 }
 
 .page-content {
@@ -11,7 +12,7 @@ html, body {
 }
 
 .footer {
-  border-top: 1px solid #e7e7e7;
+  background-color: #e7e7e7;
   padding: 20px 0;
   height: 90px;
   margin-top: -90px;
@@ -19,4 +20,24 @@ html, body {
     float: right;
     color: lighten($text-color, 20%);
   }
+}
+
+.well {
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 5px #d7d8d9;
+}
+
+h1.huge {
+  font-size: 50px;
+}
+
+h3.subheading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+label {
+  margin-top: 10px;
 }

@@ -7,9 +7,10 @@
 {% block content %}
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-    <h1 class="text-center">Login to your Account</h1>
     <div class="well">
       <form method="post">
+        <h1 class="text-center">Login to your Account</h1>
+        <hr/>
         {% csrf_token %}
         {% if form.errors %}
         <div class="alert alert-dismissible alert-danger"  style="margin-top:10px;">
@@ -20,18 +21,20 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="form-group">
+              <label for="id_username">Email</label>
               {% text_field form.username %}
             </div>
           </div>
           <div class="col-sm-12">
             <div class="form-group">
+              <label for="id_password">Password</label>
               {% password_field form.password %}
             </div>
           </div>
           <div class="col-sm-12">
-            <a href="{% url 'password_reset' %}" style="float:right;">Forgot your Password?</a>
+            <a href="{% url 'password_reset' %}">Forgot your Password?</a>
             <br/>
-            <input type="submit" class="btn btn-primary" value="Login">
+            <input type="submit" class="btn btn-primary" value="Login"  style="float:right;">
           </div>
         </div>
       </form>
